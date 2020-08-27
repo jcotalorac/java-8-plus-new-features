@@ -15,5 +15,13 @@ public class SumOfNumbersUsingCallable {
             }
             return sum;
         };
+
+        Callable callable2 = () -> {
+            int sum = 0;
+            for (int i = array.length / 2; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        };
     }
 }
