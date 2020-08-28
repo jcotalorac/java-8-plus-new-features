@@ -21,5 +21,11 @@ public class ConsumerExample2 {
                 c2.accept(instructor);
             }
         });
+
+        instructors.forEach(instructor -> {
+            if (instructor.getYearsOfExperience() > 5 && instructor.isOnlineCourses()) {
+                c2.andThen(i -> System.out.println(i.getYearsOfExperience())).accept(instructor);
+            }
+        });
     }
 }
