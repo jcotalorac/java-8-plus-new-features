@@ -15,5 +15,11 @@ public class ConsumerExample2 {
 
         Consumer<Instructor> c3 = instructor -> System.out.println(instructor.getCourses());
         instructors.forEach(c2.andThen(c3));
+
+        instructors.forEach(instructor -> {
+            if (instructor.getYearsOfExperience() > 10) {
+                c2.accept(instructor);
+            }
+        });
     }
 }
