@@ -1,5 +1,6 @@
 package com.modernjava.funcionalprogramming;
 
+import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
 import java.util.function.LongConsumer;
 
@@ -10,5 +11,8 @@ public class ConsumerExample3 {
 
         LongConsumer longConsumer = a -> System.out.println(a * 10L);
         longConsumer.accept(10L);
+
+        DoubleConsumer doubleConsumer = a -> System.out.println(a * 10.0);
+        doubleConsumer.accept(10.0);
     }
 }
