@@ -5,13 +5,15 @@ import java.util.List;
 public class Instructor {
     String name;
     int yearsOfExperience;
+    String title;
     String gender;
     boolean onlineCourses;
     List<String> courses;
 
-    public Instructor(String name, int yearsOfExperience, String gender, boolean onlineCourses, List<String> courses) {
+    public Instructor(String name, int yearsOfExperience, String title, String gender, boolean onlineCourses, List<String> courses) {
         this.name = name;
         this.yearsOfExperience = yearsOfExperience;
+        this.title = title;
         this.gender = gender;
         this.onlineCourses = onlineCourses;
         this.courses = courses;
@@ -62,6 +64,7 @@ public class Instructor {
         return "Instructor{" +
                 "name='" + name + '\'' +
                 ", yearsOfExperience=" + yearsOfExperience +
+                ", title='" + title + '\'' +
                 ", gender='" + gender + '\'' +
                 ", onlineCourses=" + onlineCourses +
                 ", courses=" + courses +
