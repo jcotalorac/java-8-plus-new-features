@@ -12,5 +12,8 @@ public class ConsumerExample2 {
 
         Consumer<Instructor> c2 = instructor -> System.out.println(instructor.getName());
         instructors.forEach(c2);
+
+        Consumer<Instructor> c3 = instructor -> System.out.println(instructor.getCourses());
+        instructors.forEach(c2.andThen(c3));
     }
 }
