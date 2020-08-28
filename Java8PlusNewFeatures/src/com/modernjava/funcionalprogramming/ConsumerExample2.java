@@ -9,5 +9,8 @@ public class ConsumerExample2 {
 
         Consumer<Instructor> c1 = instructor -> System.out.println(instructor);
         instructors.forEach(c1);
+
+        Consumer<Instructor> c2 = instructor -> System.out.println(instructor.getName());
+        instructors.forEach(c2);
     }
 }
