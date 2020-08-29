@@ -14,5 +14,11 @@ public class PredicateExample2 {
                 System.out.println(instructor);
             }
         });
+
+        instructors.forEach(instructor -> {
+            if (p1.and(p2).test(instructor)) {
+                System.out.println(instructor);
+            }
+        });
     }
 }
