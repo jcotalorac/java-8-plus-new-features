@@ -11,5 +11,7 @@ public class PredicateExample {
         System.out.println(p1.and(p2).test(20));
 
         System.out.println(p1.or(p2).test(4));
+
+        System.out.println(p1.and(p2.negate()).test(33));
     }
 }
