@@ -12,5 +12,11 @@ public class BiConsumerExample2 {
 
         BiConsumer<String, List<String>> biConsumer1 = (name, courses) -> System.out.println("name is: " + name + " and courses are: " + courses);
         instructors.forEach(instructor -> biConsumer1.accept(instructor.getName(), instructor.getCourses()));
+
+        instructors.forEach(instructor -> {
+            if (instructor.isOnlineCourses()) {
+                biConsumer.accept(instructor.getName(), instructor.getGender());
+            }
+        });
     }
 }
