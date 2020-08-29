@@ -9,5 +9,7 @@ public class PredicateExample {
 
         Predicate<Integer> p2 = i -> i % 2 == 0;
         System.out.println(p1.and(p2).test(20));
+
+        System.out.println(p1.or(p2).test(4));
     }
 }
