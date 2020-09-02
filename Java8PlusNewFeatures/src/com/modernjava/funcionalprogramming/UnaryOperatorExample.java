@@ -2,6 +2,7 @@ package com.modernjava.funcionalprogramming;
 
 import java.util.function.Function;
 import java.util.function.IntUnaryOperator;
+import java.util.function.LongUnaryOperator;
 import java.util.function.UnaryOperator;
 
 public class UnaryOperatorExample {
@@ -14,5 +15,8 @@ public class UnaryOperatorExample {
 
         IntUnaryOperator intUnaryOperator = i -> i * 10;
         System.out.println(intUnaryOperator.applyAsInt(100));
+
+        LongUnaryOperator longUnaryOperator = i -> i * 10;
+        System.out.println(longUnaryOperator.applyAsLong(100));
     }
 }
