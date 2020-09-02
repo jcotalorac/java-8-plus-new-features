@@ -14,5 +14,6 @@ public class FunctionExample {
 
         Function<String, String> concatFunction = s -> s.concat(" In Java");
         System.out.println("Lower and concat of " + stringExample + ": " + lowerCaseFunction.andThen(concatFunction).apply(stringExample));
+        System.out.println("Concat and lower of " + stringExample + ": " + lowerCaseFunction.compose(concatFunction).apply(stringExample));
     }
 }
