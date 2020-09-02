@@ -9,7 +9,10 @@ public class FunctionExample {
         System.out.println("Square root of " + x + ": " + sqrt.apply(x));
 
         Function<String, String> lowerCaseFunction = s -> s.toLowerCase();
-        String stringToLow = "ABC";
-        System.out.println("Lower string of " + stringToLow + ": " + lowerCaseFunction.apply(stringToLow));
+        String stringExample = "PROGRAMMING";
+        System.out.println("Lower string of " + stringExample + ": " + lowerCaseFunction.apply(stringExample));
+
+        Function<String, String> concatFunction = s -> s.concat(" In Java");
+        System.out.println("Lower and concat of " + stringExample + ": " + lowerCaseFunction.andThen(concatFunction).apply(stringExample));
     }
 }
