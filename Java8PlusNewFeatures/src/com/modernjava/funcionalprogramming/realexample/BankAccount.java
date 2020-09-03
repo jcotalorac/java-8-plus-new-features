@@ -12,4 +12,5 @@ public class BankAccount {
     final Lock lock = new ReentrantLock();
 
     BiFunction<Double, Double, Double> substractFuntion = (a, b) -> a - b;
+    BiFunction<Double, Double, Double> addFunction = (a, b) -> a + b;
 }
