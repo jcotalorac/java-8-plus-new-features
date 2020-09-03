@@ -73,6 +73,8 @@ public class BankAccount {
             if (to.deposit(amount)) {
                 System.out.println("Depositing amount: " + amount + " to: " + to.getAccountName());
                 return true;
+            } else {
+                System.out.println("Failed to destination deposit. Refunding origin amount: " + amount + " to: " + getAccountName());
             }
         }
     }
