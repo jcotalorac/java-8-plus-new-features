@@ -9,5 +9,7 @@ public class BinaryOperatorExample {
         System.out.println(binaryOperator.apply(2, 4));
 
         Comparator<Integer> comparator = (a, b) -> a.compareTo(b);
+        BinaryOperator<Integer> maxBi = BinaryOperator.maxBy(comparator);
+        System.out.println(maxBi.apply(2, 4));
     }
 }
