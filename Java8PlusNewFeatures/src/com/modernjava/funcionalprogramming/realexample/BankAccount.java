@@ -71,7 +71,7 @@ public class BankAccount {
         if (withdraw(amount)) {
             System.out.println("Withdrawing amount: " + amount + " from: " + getAccountName());
             if (to.deposit(amount)) {
-                System.out.println("Depositing amount: " + amount + " to: " + getAccountName());
+                System.out.println("Depositing amount: " + amount + " to: " + to.getAccountName());
                 return true;
             }
         }
