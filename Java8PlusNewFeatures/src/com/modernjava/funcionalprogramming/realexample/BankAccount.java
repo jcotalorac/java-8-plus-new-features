@@ -46,7 +46,9 @@ public class BankAccount {
     }
 
     public boolean withdraw(double amount) {
+        if (this.lock.tryLock()) {
 
+        }
     }
 
     @Override
