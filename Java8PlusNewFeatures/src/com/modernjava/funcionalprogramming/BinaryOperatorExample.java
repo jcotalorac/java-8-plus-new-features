@@ -2,6 +2,7 @@ package com.modernjava.funcionalprogramming;
 
 import java.util.Comparator;
 import java.util.function.BinaryOperator;
+import java.util.function.IntBinaryOperator;
 
 public class BinaryOperatorExample {
     public static void main(String[] args) {
@@ -14,5 +15,8 @@ public class BinaryOperatorExample {
 
         BinaryOperator<Integer> minBy = BinaryOperator.minBy(comparator);
         System.out.println(minBy.apply(2, 4));
+
+        IntBinaryOperator intBi = (a, b) -> a * b;
+        System.out.println(intBi.applyAsInt(2, 4));
     }
 }
