@@ -1,5 +1,6 @@
 package com.modernjava.funcionalprogramming.realexample;
 
+import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 
 public class BankTransfer {
@@ -10,5 +11,9 @@ public class BankTransfer {
         BankAccount universityBankAccount = accountFactory.getBankAccount(2, 100000, "University");
 
         BiPredicate<Double, Double> p1 = (balance, amount) -> balance > amount;
+        BiConsumer<String, Double> printer = (x, y) -> System.out.println(x + y);
+        BiConsumer<BankAccount, BankAccount> printer2 = (student, university) -> System.out.println("Ending balance of student account: " +
+                student.getBalance() + ", University account: " + university.getBalance());
+
     }
 }
