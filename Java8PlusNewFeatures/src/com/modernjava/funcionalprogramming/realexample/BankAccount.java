@@ -56,6 +56,17 @@ public class BankAccount {
         return false;
     }
 
+    public boolean deposit(double amount) throws InterruptedException {
+        if (lock.tryLock()) {
+            Thread.sleep(1000);
+            balance = addFunction.apply(balance, amount);
+            lock.unlock();
+            return true;
+        }
+
+        return false;
+    }
+
     @Override
     public String toString() {
         return "BankAccount{" +
