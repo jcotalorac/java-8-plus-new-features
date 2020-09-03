@@ -2,6 +2,7 @@ package com.modernjava.funcionalprogramming;
 
 import java.util.Comparator;
 import java.util.function.BinaryOperator;
+import java.util.function.DoubleBinaryOperator;
 import java.util.function.IntBinaryOperator;
 import java.util.function.LongBinaryOperator;
 
@@ -22,5 +23,8 @@ public class BinaryOperatorExample {
 
         LongBinaryOperator longBi = (a, b) -> a * b;
         System.out.println(longBi.applyAsLong(2, 4));
+
+        DoubleBinaryOperator doubleBi = (a, b) -> a * b;
+        System.out.println(doubleBi.applyAsDouble(2.0, 4.0));
     }
 }
