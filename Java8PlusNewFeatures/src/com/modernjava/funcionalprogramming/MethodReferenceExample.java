@@ -10,5 +10,8 @@ public class MethodReferenceExample {
 
         Function<Integer, Double> sqrt = n -> Math.sqrt(n);
         Function<Integer, Double> sqrt2 = Math::sqrt;
+
+        Function<String, String> lowercaseFunction = s -> s.toLowerCase();
+        Function<String, String> lowercaseFunction1 = String::toLowerCase;
     }
 }
