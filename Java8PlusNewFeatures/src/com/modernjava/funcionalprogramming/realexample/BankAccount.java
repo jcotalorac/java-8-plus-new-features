@@ -75,6 +75,8 @@ public class BankAccount {
                 return true;
             } else {
                 System.out.println("Failed to destination deposit. Refunding origin amount: " + amount + " to: " + getAccountName());
+                while (!deposit(amount)){
+                }
             }
         }
     }
