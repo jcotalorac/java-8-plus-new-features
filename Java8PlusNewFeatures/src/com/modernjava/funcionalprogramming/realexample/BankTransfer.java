@@ -19,5 +19,14 @@ public class BankTransfer {
 
         ExecutorService service = Executors.newFixedThreadPool(10);
 
+        Thread t1 = new Thread(() -> {
+            System.out.println(Thread.currentThread().getName() + " says :: Executing Transfer");
+            double amount = 1000;
+            if (!p1.test(studentBankAccount.getBalance(), amount)) {
+                printer.accept(Thread.currentThread().getName() + " says :: balance is not enough, ", amount);
+                return;
+            }
+        });
+
     }
 }
