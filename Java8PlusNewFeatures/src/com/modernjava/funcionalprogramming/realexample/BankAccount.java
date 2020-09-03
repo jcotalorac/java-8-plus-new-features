@@ -69,7 +69,9 @@ public class BankAccount {
 
     public boolean transfer(BankAccount to, double amount) throws InterruptedException {
         if (withdraw(amount)) {
+            if (to.deposit(amount)) {
 
+            }
         }
     }
 
