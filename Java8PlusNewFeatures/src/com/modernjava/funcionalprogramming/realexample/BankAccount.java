@@ -13,4 +13,10 @@ public class BankAccount {
 
     BiFunction<Double, Double, Double> substractFuntion = (a, b) -> a - b;
     BiFunction<Double, Double, Double> addFunction = (a, b) -> a + b;
+
+    public BankAccount(int id, double balance, String accountName) {
+        this.id = id;
+        this.balance = balance;
+        this.accountName = accountName;
+    }
 }
