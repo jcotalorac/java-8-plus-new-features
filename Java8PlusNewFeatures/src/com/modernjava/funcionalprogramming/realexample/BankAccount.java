@@ -67,6 +67,10 @@ public class BankAccount {
         return false;
     }
 
+    public boolean transfer(BankAccount to, double amount) throws InterruptedException {
+
+    }
+
     @Override
     public String toString() {
         return "BankAccount{" +
