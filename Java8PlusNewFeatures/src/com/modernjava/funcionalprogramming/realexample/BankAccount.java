@@ -69,8 +69,9 @@ public class BankAccount {
 
     public boolean transfer(BankAccount to, double amount) throws InterruptedException {
         if (withdraw(amount)) {
+            System.out.println("Withdrawing amount: " + amount + " from: " + getAccountName());
             if (to.deposit(amount)) {
-
+                System.out.println("Depositing amount: " + amount + " to: " + getAccountName());
             }
         }
     }
