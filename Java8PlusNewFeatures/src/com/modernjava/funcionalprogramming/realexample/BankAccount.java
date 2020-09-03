@@ -45,8 +45,9 @@ public class BankAccount {
         this.accountName = accountName;
     }
 
-    public boolean withdraw(double amount) {
+    public boolean withdraw(double amount) throws InterruptedException {
         if (this.lock.tryLock()) {
+            Thread.sleep(1000);
             balance = substractFuntion.apply(balance, amount);
             this.lock.unlock();
             return true;
