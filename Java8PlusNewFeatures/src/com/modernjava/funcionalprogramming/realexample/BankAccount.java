@@ -47,8 +47,11 @@ public class BankAccount {
 
     public boolean withdraw(double amount) {
         if (this.lock.tryLock()) {
-
+            balance = substractFuntion.apply(balance, amount);
+            return true;
         }
+
+        return false;
     }
 
     @Override
