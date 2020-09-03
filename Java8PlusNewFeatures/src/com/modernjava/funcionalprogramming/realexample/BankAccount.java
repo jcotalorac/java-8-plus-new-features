@@ -48,6 +48,7 @@ public class BankAccount {
     public boolean withdraw(double amount) {
         if (this.lock.tryLock()) {
             balance = substractFuntion.apply(balance, amount);
+            this.lock.unlock();
             return true;
         }
 
