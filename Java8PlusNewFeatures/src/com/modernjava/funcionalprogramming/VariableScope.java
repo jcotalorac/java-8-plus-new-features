@@ -10,6 +10,7 @@ public class VariableScope {
 
         int k = 0;
         List<Instructor> instructors = Instructors.getAll();
-        instructors.forEach(instructor -> System.out.println(instructor + "" + k++));
+        instructors.forEach(instructor -> System.out.println(instructor + "" + k));
+        k = 6;
     }
 }
