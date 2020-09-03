@@ -2,6 +2,7 @@ package com.modernjava.funcionalprogramming.realexample;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.BiFunction;
 
 public class BankAccount {
     private int id;
@@ -9,4 +10,6 @@ public class BankAccount {
     private String accountName;
 
     final Lock lock = new ReentrantLock();
+
+    BiFunction<Double, Double, Double> substractFuntion = (a, b) -> a - b;
 }
