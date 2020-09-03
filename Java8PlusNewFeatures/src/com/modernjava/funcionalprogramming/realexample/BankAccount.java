@@ -45,6 +45,10 @@ public class BankAccount {
         this.accountName = accountName;
     }
 
+    public boolean withdraw(double amount) {
+
+    }
+
     @Override
     public String toString() {
         return "BankAccount{" +
