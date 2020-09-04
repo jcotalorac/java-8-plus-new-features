@@ -35,6 +35,8 @@ public class BankTransfer {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            printer.accept(Thread.currentThread().getName() + " says transfer is successful. Balance in university account: ", universityBankAccount.getBalance());
         });
     }
 }
