@@ -51,5 +51,7 @@ public class BankTransfer {
         } catch (InterruptedException i) {
             i.printStackTrace();
         }
+
+        printer2.accept(studentBankAccount, universityBankAccount);
     }
 }
