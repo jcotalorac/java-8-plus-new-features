@@ -38,5 +38,10 @@ public class BankTransfer {
 
             printer.accept(Thread.currentThread().getName() + " says transfer is successful. Balance in university account: ", universityBankAccount.getBalance());
         });
+
+        for (int i = 0; i < 20; i++) {
+            service.submit(t1);
+        }
+        service.shutdown();
     }
 }
