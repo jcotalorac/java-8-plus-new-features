@@ -43,5 +43,13 @@ public class BankTransfer {
             service.submit(t1);
         }
         service.shutdown();
+
+        try {
+            while (!service.awaitTermination(24L, TimeUnit.HOURS)) {
+                System.out.println("Not finished yet. Still waiting for termination of service");
+            }
+        } catch (InterruptedException i) {
+            i.printStackTrace();
+        }
     }
 }
