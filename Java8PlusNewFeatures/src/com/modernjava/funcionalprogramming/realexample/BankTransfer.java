@@ -2,6 +2,7 @@ package com.modernjava.funcionalprogramming.realexample;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 
@@ -21,12 +22,19 @@ public class BankTransfer {
 
         Thread t1 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + " says :: Executing Transfer");
-            double amount = 1000;
-            if (!p1.test(studentBankAccount.getBalance(), amount)) {
-                printer.accept(Thread.currentThread().getName() + " says :: balance is not enough, ", amount);
-                return;
+
+            try {
+                double amount = 1000;
+                if (!p1.test(studentBankAccount.getBalance(), amount)) {
+                    printer.accept(Thread.currentThread().getName() + " says :: balance is not enough, ", amount);
+                    return;
+                }
+                while (!studentBankAccount.transfer(universityBankAccount, amount)) {
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
-
     }
 }
